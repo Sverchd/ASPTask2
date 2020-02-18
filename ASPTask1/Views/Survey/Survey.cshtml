@@ -1,0 +1,34 @@
+﻿@using ASPTask1.Helpers;
+@{
+    ViewBag.Title = "Form";
+}
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+
+
+<div class="row">
+    @using (Html.BeginForm("Survey", "Survey", FormMethod.Post))
+    {
+        @Html.TextBox("Name", null, new {placeholder = "Enter your name", style = " width:300px"})
+        @Html.TextArea("Surname", null, new {placeholder = "Enter your surname", style = " width:300px"})
+        <div>
+            @foreach (string ver in Model[0])
+            {
+                <input type="checkbox" id="@ver" value="@ver" name="versions">
+                <label for="@ver">@ver</label>
+            }
+        </div>
+        <div>
+            <input type="radio" id="@Model[1][0]" value="@Model[1][0]" name="emotions" checked>
+            <label for="@Model[1][0]">@Model[1][0]</label>
+            @for (var i = 1; i < Model[1].Count; i++)
+            {
+                string ver = Model[1][i];
+                <input type="radio" id="@ver" value="@ver" name="emotions">
+                <label for="@ver">@ver</label>
+            }
+        </div>
+        <input type="submit" name="Button" value="Submit"/>
+    }
+
+</div>

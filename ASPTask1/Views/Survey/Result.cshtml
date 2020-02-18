@@ -1,0 +1,22 @@
+﻿@using ASPTask1.Helpers
+
+@{
+    var tst = Model;
+    ViewBag.Title = "Result";
+}
+
+<h2>Your Result</h2>
+@{
+    string name = "Your name is: " + Model.name;
+    string surname = "Your surname is: " + Model.surname;
+    var versions = "Your favourite versions of an Android are:";
+    foreach (string ver in Model.andVers)
+    {
+        versions += " " + ver;
+    }
+    string emotions = "You " + Model.emotions + " it!";
+    var res = new List<string> {name, surname, versions, emotions};
+}
+
+@Html.CreateUl(res, "ulResult")
+@Html.CreateOl(res, "olResult")

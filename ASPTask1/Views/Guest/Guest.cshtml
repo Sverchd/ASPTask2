@@ -1,0 +1,28 @@
+﻿@using ViewModels;
+@{
+    ViewBag.Title = "Reviews";
+}
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+
+<p>Use this area to leave a comment</p>
+<div class="row">
+    <div class="col-md-4">
+        @foreach (ViewReview ar in Model)
+        {
+            <h2>@ar.name</h2>
+            <p>
+                @ar.content
+            </p>
+            <h3>@ar.date.ToString()</h3>
+        }
+    </div>
+    @using (Html.BeginForm("Guest", "Guest", FormMethod.Post))
+    {
+        @Html.TextBox("UserName", null, new {placeholder = "Enter your username", style = " width:300px"})
+        @Html.TextArea("ReviewText", null, new {placeholder = "Enter your review", style = " width:300px"})
+
+        <input type="submit" name="Button" value="Submit"/>
+    }
+
+</div>

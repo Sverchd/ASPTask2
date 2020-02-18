@@ -1,0 +1,135 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+	display:flex;
+	align-items:center;
+	flex-direction: column;
+	padding:0;
+	margin: 0;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+header
+{
+	display:flex;
+	flex-direction: row;
+	width: 100%;
+	align-items: flex-end;
+	
+}
+li {
+	font-family: HelveticaNeue;
+	color: white;
+}
+h1
+{
+	font-family: HelveticaNeue;
+	color: white;
+}
+h2,h3
+{
+	font-family: HelveticaNeue;
+	color: white;
+}
+form {
+	display: flex;
+	flex-direction: column;
+}
+
+p
+{
+	font-family: HelveticaNeue;
+	color: white;
+}
+footer
+{
+	display:flex;
+	flex-direction: row;
+	width: 100%;
+	align-items: flex-end;
+}
+.content
+{
+	display: flex;
+	width:80%;
+	flex-direction: row;
+	
+}
+.header-logo
+{
+	display: block;
+	height: 50px;
+	width: calc(50px * 2);
+	background-image: url(Logos/Lineage_OS_Logo.png);
+	background-size: cover;
+	margin-left: 10%;
+}
+.navbar-item {
+	color: #167c80;
+	font-family: HelveticaNeue;
+	text-decoration: none;
+	font-size: 20px;
+}
+a
+{
+	color: white;
+	font-family: HelveticaNeue;
+	font-style: italic;
+}
+.navbar-nav
+{
+	color: #167c80;
+	
+}
+#to-top
+{
+	margin-left: 12px;
+	color: white;
+}
+.header-text
+{
+	font-family: HelveticaNeue;
+	text-decoration: none;
+	font-size: 40px;
+	vertical-align: bottom;
+	color: #167c80;
+}
+.container
+{
+	background-color: #167c80;
+	width: 80%;
+}
+.navbar
+{
+	background-color: #E0F6F7;
+	width: 20%;
+}
+@font-face {
+    font-family:'HelveticaNeue';src:url(fonts/HelveticaNeueCyr-Medium.eot);src:url(fonts/HelveticaNeueCyr-Medium.eot?iefix) format('eot'),url(fonts/HelveticaNeueCyr-Medium.woff) format('woff'),url(fonts/HelveticaNeueCyr-Medium.ttf) format('truetype');font-weight:200;font-style:normal
+}
+
+@font-face {
+    font-family:'HelveticaNeue';src:url(fonts/HelveticaNeueCyr-Bold.eot);src:url(fonts/HelveticaNeueCyr-Bold.eot?iefix) format('eot'),url(fonts/HelveticaNeueCyr-Bold.woff) format('woff'),url(fonts/HelveticaNeueCyr-Bold.ttf) format('truetype');font-weight:300;font-style:normal
+}
+
+@font-face {
+    font-family:'HelveticaNeue';src:url(fonts/HelveticaNeueCyr-Thin.eot);src:url(fonts/HelveticaNeueCyr-Thin.eot?iefix) format('eot'),url(fonts/HelveticaNeueCyr-Thin.woff) format('woff'),url(fonts/HelveticaNeueCyr-Thin.ttf) format('truetype');font-weight:100;font-style:normal
+}
